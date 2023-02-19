@@ -12,6 +12,7 @@ triangleTotal.toFixed(2);
    // console.log('hello');
 
    // setTextElementValueById('list-check')
+   
    const listContainer = document.getElementById('list-container');
 
    const li = document.createElement('li');
