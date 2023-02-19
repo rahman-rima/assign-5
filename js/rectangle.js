@@ -12,7 +12,11 @@ triangleTotal.toFixed(2);
    // console.log('hello');
 
    // setTextElementValueById('list-check')
-   
+   const validate = validationOfInputField(getTriangleB, getTriangleH);
+   if(validate == 0){
+    return false;
+   }
+
    const listContainer = document.getElementById('list-container');
 
    const li = document.createElement('li');

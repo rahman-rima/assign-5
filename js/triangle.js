@@ -12,15 +12,22 @@ document.getElementById('triangle-click').addEventListener('click', function(){
    // console.log('hello');
 
    // setTextElementValueById('list-check')
+   
+
    const listContainer = document.getElementById('list-container');
 
    const li = document.createElement('li');
    const nameT = document.getElementById('name-t');
    const see = nameT.innerText ;
    const cm2 = document.getElementById('cm2');
-   
-   li.innerText = see + " :  " + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+ triangleTotal+cm2.innerText;
-   li.classList.add('item');
-   listContainer.appendChild(li);
-
+   const validate = validationOfInputField(getTriangleB, getTriangleH);
+   if(validate == 0){
+    return false;
+   }else{
+    li.innerText = see + " :  " + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+ triangleTotal+cm2.innerText;
+    li.classList.add('item');
+    listContainer.appendChild(li);
+ 
+   }
+  
 })
