@@ -24,5 +24,5 @@ function cal(a, b){
    return result;
 }
 function call(a,b){
-    return 3.41*a*b;
+    return  3.41*a*b;
 }
