@@ -12,6 +12,7 @@ document.getElementById('rhombus-click').addEventListener('click', function(){
    // console.log('hello');
 
    // setTextElementValueById('list-check')
+   
    const listContainer = document.getElementById('list-container');
 
    const li = document.createElement('li');
