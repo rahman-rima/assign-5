@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body class="container-fluid shadow-lg">
+    
+    <header class=" bg-info-subtle rounded-4">
+       <div class=" mt-5 ms-4 pt-3 pb-3 d-flex justify-content-between ">
+        
+        <div class="">
+            <h2>Interactive </h2> 
+        <h4 class="text-body-secondary">Geometry Genius</h4>
+        </div>
+    
+        <div class="text-center">
+            <button id="blog-rederict" type="button" class="btn btn-primary mt-4 ps-4 pe-4 me-5">Blog</button>
+        </div>
+         
+       </div>
+    </header>
+
+    <main>
+        
+        <div class="d-flex">
+            <section class="container-fluid text-center mt-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-3 mt-5 " style="width: 70rem;">
+                    <div class="col">
+                      <div class="card shadow-lg">
+                        <img src="images/triangle.png" class="w-50 mx-auto mt-3 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" id="name-t">Triangle</h5>
+                          <p class="card-text">Area (A) = 0.5 x b x h</p>
+                          <input id="triangle-b" class="bg-body-secondary w-25" type="text" placeholder="b"> cm
+                          <input id="triangle-h" class="bg-body-secondary w-25" type="text" placeholder="h"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="triangle-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-lg">
+                        <img src="images/rectangle.png" class="w-50 mx-auto mt-5 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 id="name-rt" class="card-title">Recangle</h5>
+                          <p class="card-text">Area (A) = w x I</p>
+                          <input id="rectangle-w" class="bg-body-secondary w-25" type="text" placeholder="w"> cm
+                          <input id="rectangle-i" class="bg-body-secondary w-25" type="text" placeholder="I"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="rectangle-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-lg">
+                        <img src="images/parallelogram.png" class="w-50 mx-auto my-auto mt-5 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 id="name-prs" class="card-title">Parallelogram</h5>
+                          <p class="card-text">Area (A) = b x h</p>
+                          <input id="parallelogram-b" class="bg-body-secondary w-25" type="number" placeholder="b"> cm
+                          <input id="parallelogram-h" class="bg-body-secondary w-25" type="number" placeholder="h"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="parallelogram-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col ">
+                      <div class="card shadow-lg" onclick="randomBackground()">
+                        <img src="images/rhombus.png" class="w-50 mx-auto mt-5 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" id="name-r">Rhombus</h5>
+                          <p class="card-text">Area (A) = 0.5 x d<small>1</small> x d<small>2</small></p>
+                          <input id="rhombus-d1" class="bg-body-secondary w-25" type="number" placeholder="d1"> cm
+                          <input id="rhombus-d2" class="bg-body-secondary w-25" type="number" placeholder="d2"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="rhombus-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-lg">
+                        <img src="images/pentagon.png" class="w-50 mx-auto mt-3 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" id="name-pe">Pentagon</h5>
+                          <p class="card-text">Area (A) = 0.5 x p x b</p>
+                          <input id="pentagon-p"  class="bg-body-secondary w-25" type="number" placeholder="p"> cm
+                          <input id="pentagon-b" class="bg-body-secondary w-25" type="number" placeholder="b"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="pentagon-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col" id="ellip" >
+                      <div class="card shadow-lg">
+                        <img src="images/ellipse.png" class="w-50 mx-auto mt-5 card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 id="name-e" class="card-title">Ellipse</h5>
+                          <p class="card-text">Area (A) = &pi;ab</p>
+                          <input id="ellipse-a" class="bg-body-secondary w-25" type="number" placeholder="a"> cm
+                          <input id="ellipse-b" class="bg-body-secondary w-25" type="number" placeholder="b"> cm
+                          <div class="d-grid gap-2 col-10 mx-auto mt-3">
+                            <button id="ellipse-click" class="btn btn-primary">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+           </section>
+           <section class="container-fluid card shadow-lg mt-5">
+            <div class=" row row-cols-1 row-cols-lg-1 mx-auto" >
+               
+                <div class="card-body">
+                  <h5 class="card-tittle text-center"><u>Area Calculation</u></h5>
+                  <p  id="total-show"> 
+                    <ol id="list-container">
+                        <li id="list-check" class="item"><pre><span class="text-primary">Shape</span>   <span class="text-primary">          Area  </span>          <span class="text-primary">Button</span></pre> 
+
+                        </li>
+                        <!-- <a href="#" class="btn btn-primary">convert to m<sup>2</sup></a> -->
+                    </ol>
+                  
+            </p>
+                  
+                </div>
+              </div>
+           </section>
+        </div>
+        
+        <div class="d-none">
+          <p id="cm2">cm &sup2</p>
+        </div>
+
+
+    </main>
+
+
+    <!-- script -->
+    <script>
+        document.getElementById('blog-rederict').addEventListener('click', function(){
+            window.location.href = 'blog.html';
+        })
+
+
+        document.getElementById('ellip').addEventListener('click', function(){
+          randomBackground = () => {
+        let x = Math.floor(Math.random() * 256)
+        let y = Math.floor(Math.random() * 256)
+        let z = Math.floor(Math.random() * 256)
+        let bgColor = `rgb(${x}, ${y}, ${z})`
+        document.body.style.background = bgColor;
+      }
+
+      randomBackground()
+        })
+
+    </script>
+    <script src="/js/area.js"></script>
+    <script src="/js/triangle.js"></script>
+    <script src="/js/rectangle.js"></script>
+    <script src="/js/parallelogram.js"></script>
+    <script src="/js/rombus.js"></script>
+    <script src="/js/pentagon.js"></script>
+    <script src="/js/elipces.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
